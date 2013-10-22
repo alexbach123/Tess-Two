@@ -23,7 +23,7 @@
         </config-file>
 		
 		
-        <source-file src="src/android/TesseractStart.java" target-dir="src/dk/evry/tesseract" />  
+        <source-file src="src/android/TesseractStart.java" target-dir="src/com/tesseract/phonegap/" />  
 		<source-file src="src/android/PageIterator.java" target-dir="src/com/googlecode/tesseract/android" />  
 		<source-file src="src/android/ResultIterator.java" target-dir="src/com/googlecode/tesseract/android" />  
 		<source-file src="src/android/TessBaseAPI.java" target-dir="src/com/googlecode/tesseract/android" />  
@@ -31,8 +31,8 @@
 		<source-file src="src/android/Binarize.java" target-dir="src/com/googlecode/leptonica/android" />
 		<source-file src="src/android/Box.java" target-dir="src/com/googlecode/leptonica/android" />  
 		<source-file src="src/android/Constants.java" target-dir="src/com/googlecode/leptonica/android" />  
-		<source-file src="src/android/Convert.java" target-dir="src/com/googlecode/leptonica/android" />  
-		<source-file src="src/android/Enhance.java" target-dir="src/com/googlecode/leptonica/android" />  
+		<source-file src="src/android/Convert.java" target-dir="src/com/googlecode/leptonica/android" />   
+		<source-file src="src/android/Enhance.java" target-dir="src/com/googlecode/de/leptonica/android" /> 
 		<source-file src="src/android/JpegIO.java" target-dir="src/com/googlecode/leptonica/android" />  
 		<source-file src="src/android/Pix.java" target-dir="src/com/googlecode/leptonica/android" />  
 		<source-file src="src/android/Pixa.java" target-dir="src/com/googlecode/leptonica/android" />  

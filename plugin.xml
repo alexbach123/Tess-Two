@@ -32,7 +32,7 @@
 		<source-file src="src/android/Box.java" target-dir="src/com/googlecode/leptonica/android" />  
 		<source-file src="src/android/Constants.java" target-dir="src/com/googlecode/leptonica/android" />  
 		<source-file src="src/android/Convert.java" target-dir="src/com/googlecode/leptonica/android" />   
-		<source-file src="src/android/Enhance.java" target-dir="src/com/googlecode/de/leptonica/android" /> 
+		<source-file src="src/android/Enhance.java" target-dir="src/com/googlecode/leptonica/android" /> 
 		<source-file src="src/android/JpegIO.java" target-dir="src/com/googlecode/leptonica/android" />  
 		<source-file src="src/android/Pix.java" target-dir="src/com/googlecode/leptonica/android" />  
 		<source-file src="src/android/Pixa.java" target-dir="src/com/googlecode/leptonica/android" />  
@@ -42,6 +42,17 @@
 		<source-file src="src/android/Skew.java" target-dir="src/com/googlecode/leptonica/android" />  
 		<source-file src="src/android/WriteFile.java" target-dir="src/com/googlecode/leptonica/android" /> 
 
+		<source-file src="libs/armeabi/liblept.so" target-dir="libs/armeabi" />
+		<source-file src="libs/armeabi/libtess.so" target-dir="libs/armeabi" />
+		
+		<source-file src="libs/mips/liblept.so" target-dir="libs/mips" />
+		<source-file src="libs/mips/liblept.so" target-dir="libs/mips" />
+		
+		<source-file src="libs/x86/liblept.so" target-dir="libs/x86" />
+		<source-file src="libs/x86/liblept.so" target-dir="libs/x86" />
+		
+		<source-file src="libs/armeabi-v7a/liblept.so" target-dir="libs/armeabi-v7a" />
+		<source-file src="libs/armeabi-v7a/liblept.so" target-dir="libs/armeabi-v7a" />	
 		
      </platform>          
 </plugin>

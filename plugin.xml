@@ -1,0 +1,95 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="dk.evry.tesseract"
+      version="0.1.0">
+    <name>Tesseract</name>
+    <description>Sample PhoneGap Tesseract Plugin</description>
+    <license>MIT</license>
+    <keywords>phonegap,tesseract</keywords>
+ 
+ 
+    <js-module src="www/tesseract.js" name="Tesseract">
+        <clobbers target="window.tesseract" />
+    </js-module>
+ 
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="TesseractStart">
+                <param name="android-package" value="dk.evry.tesseract.TesseractStart"/>
+            </feature>
+			<feature name="PageIterator">
+                <param name="android-package" value="com.googlecode.tesseract.android.PageIterator"/>
+            </feature>
+			<feature name="ResultIterator">
+                <param name="android-package" value="com.googlecode.tesseract.android.ResultIterator"/>
+            </feature>
+			<feature name="TessBaseAPI">
+                <param name="android-package" value="com.googlecode.tesseract.android.TessBaseAPI"/>
+            </feature>
+			<feature name="AdaptiveMap">
+                <param name="android-package" value="com.googlecode.leptonica.android.AdaptiveMap"/>
+            </feature>
+			<feature name="Binarize">
+                <param name="android-package" value="com.googlecode.leptonica.android.Binarize"/>
+            </feature>
+			<feature name="Box">
+                <param name="android-package" value="com.googlecode.leptonica.android.Box"/>
+            </feature>
+			<feature name="Constants">
+                <param name="android-package" value="com.googlecode.leptonica.android.Constants"/>
+            </feature>
+			<feature name="Convert">
+                <param name="android-package" value="com.googlecode.leptonica.android.Convert"/>
+            </feature>
+			<feature name="Enhance">
+                <param name="android-package" value="com.googlecode.leptonica.android.Enhance"/>
+            </feature>
+			<feature name="JpegIO">
+                <param name="android-package" value="com.googlecode.leptonica.android.JpegIO"/>
+            </feature>
+			<feature name="Pix">
+                <param name="android-package" value="com.googlecode.leptonica.android.Pix"/>
+            </feature>
+			<feature name="Pixa">
+                <param name="android-package" value="com.googlecode.leptonica.android.Pixa"/>
+            </feature>
+			<feature name="ReadFile">
+                <param name="android-package" value="com.googlecode.leptonica.android.ReadFile"/>
+            </feature>
+			<feature name="Rotate">
+                <param name="android-package" value="com.googlecode.leptonica.android.Rotate"/>
+            </feature>
+			<feature name="Scale">
+                <param name="android-package" value="com.googlecode.leptonica.android.Scale"/>
+            </feature>
+			<feature name="Skew">
+                <param name="android-package" value="com.googlecode.leptonica.android.Skew"/>
+            </feature>
+			<feature name="WriteFile">
+                <param name="android-package" value="com.googlecode.leptonica.android.WriteFile"/>
+            </feature>				
+        </config-file>
+ 
+        <source-file src="src/android/TesseractStart.java" target-dir="src/dk/evry/tesseract" />  
+		<source-file src="src/android/PageIterator.java" target-dir="src/com/googlecode/tesseract/android" />  
+		<source-file src="src/android/ResultIterator.java" target-dir="src/com/googlecode/tesseract/android" />  
+		<source-file src="src/android/TessBaseAPI.java" target-dir="src/com/googlecode/tesseract/android" />  
+		<source-file src="src/android/AdaptiveMap.java" target-dir="src/com/googlecode/leptonica/android" />  
+		<source-file src="src/android/Binarize.java" target-dir="src/com/googlecode/leptonica/android" />
+		<source-file src="src/android/Box.java" target-dir="src/com/googlecode/leptonica/android" />  
+		<source-file src="src/android/Constants.java" target-dir="src/com/googlecode/leptonica/android" />  
+		<source-file src="src/android/Convert.java" target-dir="src/com/googlecode/leptonica/android" />  
+		<source-file src="src/android/Enhance.java" target-dir="src/com/googlecode/leptonica/android" />  
+		<source-file src="src/android/JpegIO.java" target-dir="src/com/googlecode/leptonica/android" />  
+		<source-file src="src/android/Pix.java" target-dir="src/com/googlecode/leptonica/android" />  
+		<source-file src="src/android/Pixa.java" target-dir="src/com/googlecode/leptonica/android" />  
+		<source-file src="src/android/ReadFile.java" target-dir="src/com/googlecode/leptonica/android" />  
+		<source-file src="src/android/Rotate.java" target-dir="src/com/googlecode/leptonica/android" />  
+		<source-file src="src/android/Scale.java" target-dir="src/com/googlecode/leptonica/android" />  
+		<source-file src="src/android/Skew.java" target-dir="src/com/googlecode/leptonica/android" />  
+		<source-file src="src/android/WriteFile.java" target-dir="src/com/googlecode/leptonica/android" />  		
+     </platform>          
+</plugin>

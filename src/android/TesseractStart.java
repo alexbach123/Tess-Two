@@ -1,23 +1,28 @@
-
-package dk.evry.tesseract;
+package com.tesseract.phonegap;
 
 import java.io.File;
 
-import net.sourceforge.tess4j.Tesseract;
-import net.sourceforge.tess4j.TesseractException;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
 import org.json.JSONObject;
 import org.json.JSONArray;
 import org.json.JSONException;
+
+import com.googlecode.tesseract.android.TessBaseAPI;
+
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Matrix;
+import android.media.ExifInterface;
+import android.os.Environment;
 
 
 public class TesseractStart extends CordovaPlugin {
 	//Add tesseractEntry action to our plugin
 	public static final String ACTION_ADD_TESSERACT_ENTRY = "addTesseractEntry";
+	public static final String DATA_PATH = Environment.getExternalStorageDirectory().toString() + "/PhoneGapTessTwo/";
 	
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
@@ -47,16 +52,26 @@ public class TesseractStart extends CordovaPlugin {
 	
 	public String TesseractExample() {
         File imageFile = new File("eurotext.png");
-        Tesseract instance = Tesseract.getInstance(); // JNA Interface Mapping
-        // Tesseract1 instance = new Tesseract1(); // JNA Direct Mapping
-        String result = "";
-        try {
-            result = instance.doOCR(imageFile);
-            
-        } catch (TesseractException e) {
-            result = "OOOOOO";
-        }
-        return result;
+		// _path = path to the image to be OCRed
+		
+		
+		//File myDir = DATA_PATH;
+				//getExternalFilesDir(Environment.MEDIA_MOUNTED);
+		
+
+	     // lang = for which the language data exists, usually "eng"
+		TessBaseAPI baseApi = new TessBaseAPI();
+		
+		 // DATA_PATH = Path to the storage
+		baseApi.init(DATA_PATH, "eng"); // myDir + "/tessdata/eng.traineddata" must be present
+		
+		// Eg. baseApi.init("/mnt/sdcard/tesseract/tessdata/eng.traineddata", "eng");
+		baseApi.setImage(imageFile);
+		 
+		String recognizedText = baseApi.getUTF8Text(); // Log or otherwise display this string...
+		baseApi.end();
+		
+		return recognizedText;
     }
 	
 	
